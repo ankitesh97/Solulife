@@ -1,0 +1,44 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:ignore="UnusedAttribute">
+
+    <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinatelayoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <FrameLayout
+                android:id="@+id/fragment_holder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                android:clickable="true"
+                android:src="@android:drawable/ic_menu_send"
+                android:tag="bg_tint_accent_color_selector_lighter"
+                app:elevation="6dp"
+                app:pressedTranslationZ="12dp" />
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <com.roughike.bottombar.BottomBar
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            app:bb_activeTabColor="@color/colorAccent"
+            app:bb_inActiveTabColor="#484848"
+            app:bb_tabXmlResource="@xml/tabs" />
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.sapa.solulife">
+
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".activities.IAmBoredActivity">
+        </activity>
+        <activity android:name=".activities.ScheduleActivity" />
+        <activity android:name=".activities.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".Notes.EditNoteActivity"
+                android:configChanges="keyboardHidden|orientation|screenSize"
+                android:windowSoftInputMode="stateHidden"
+                android:parentActivityName=".Notes.NotesActivity">
+        </activity>
+
+        <activity android:name=".Notes.NotesActivity"/>
+
+        <activity android:name=".Notes.ViewNoteCollapseActivity"
+                  android:parentActivityName=".Notes.NotesActivity"/>
+
+
+        <activity android:name=".Expense.ExpenseActivity"
+                  android:title="Finance"/>
+
+        <activity android:name=".Expense.NewExpenseActivity"
+                  android:configChanges="keyboardHidden|orientation|screenSize"
+                  android:windowSoftInputMode="stateHidden"
+                  android:parentActivityName=".Expense.ExpenseActivity"/>
+
+
+        <activity android:name=".activities.AddScheduleActivity">
+        </activity>
+
+        <activity android:name=".activities.MagnifyActivity"/>
+
+        <activity android:name=".Reminders.ReminderActivity"/>
+
+        <activity android:name=".Reminders.EditReminder"/>
+    </application>
+
+</manifest>

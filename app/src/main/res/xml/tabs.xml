@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+            id="@+id/home"
+            icon="@drawable/home"
+            title="Home" />
+    <tab
+            id="@+id/finance"
+            icon="@drawable/cash_multiple"
+            title="Finance" />
+
+    <tab
+            id="@+id/breathe"
+            icon="@drawable/blur_radial"
+            title="Breathe" />
+</tabs>
